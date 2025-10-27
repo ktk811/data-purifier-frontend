@@ -42,7 +42,7 @@ export default function FileUploadArea({
 
       const data = await response.json()
       setDataProfile(data.profile)
-      setTableData(data.preview)
+      setTableData(data.preview.data)
       setFileUploaded(true)
       toast.success("File uploaded successfully!")
     } catch (error) {
