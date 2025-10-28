@@ -17,7 +17,7 @@ export default function RemoveDuplicatesModal({ onClose, onSuccess }: RemoveDupl
   const handleApply = async () => {
     setIsLoading(true)
     try {
-      const response = await fetch("/api/clean", {
+      const response = await fetch("https://datapurifier.onrender.com/clean", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ operation: "remove_duplicates" }),
