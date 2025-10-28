@@ -25,7 +25,7 @@ export default function HandleMissingValuesModal({ onClose, onSuccess }: HandleM
 
     setIsLoading(true)
     try {
-      const response = await fetch("/api/clean", {
+      const response = await fetch("https://datapurifier.onrender.com/clean", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
